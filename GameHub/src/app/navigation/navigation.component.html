@@ -1,0 +1,36 @@
+
+
+<nav>
+    <a [routerLink]="['/']" class="logo"><i class="fa-solid fa-gamepad"></i>  GamingHub</a>
+    <input placeholder="Search for games.." type="text">
+    <ul>
+        <li>
+            <a href="" class="favourite"><i class="fa-regular fa-bookmark"></i></a>
+        </li>
+        <li> 
+            <a href="" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+        </li>
+        <li *ngIf="!this.authService.isLoggedIn()">
+             <a href="" class="login" routerLink="/login"><i class="fa-duotone fa-user-headset"></i>Login</a>
+        </li>
+        
+        <li *ngIf="!this.authService.isLoggedIn()">
+             <a href="" routerLink="/register" class="register">Register</a>
+        </li>
+        <li *ngIf="this.authService.isUserAdmin()">
+          <a href="" routerLink="/admin" class="register">Admin Page</a>
+        </li>
+        <li *ngIf="this.authService.isLoggedIn()" (click)="logOut()">
+            <a href="" class="register">Logout</a>
+        </li>
+        <li *ngIf="this.authService.isLoggedIn()">
+          <a href="" class="register">{{this.authService.currEmail}}</a>
+      </li>
+    </ul>
+</nav>
+<header>
+    <div class="dropdown-menu" >
+        <a href="" [routerLink]="['/game/platform', item.id]" *ngFor="let item of platforms">{{item.name}}</a>
+    </div>
+    
+</header>

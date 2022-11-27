@@ -1,0 +1,104 @@
+
+<app-navigation></app-navigation>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/assets/images/cyberpunk.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/assets//images/3.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/assets//images/warcraft.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+<div class="content">
+    <div class="card" *ngFor="let item of games">
+        <span class="favourite"><i class="fa-solid fa-bookmark"></i></span>
+        <img src="{{item.imageUrl}}" alt="">
+        <p>{{item.name}}</p>
+        <span class="typeofkey">{{item.status}}</span>
+        <span class="price">Price: {{item.price}} $</span>
+        <button><a [routerLink]="['chosenGame', item.id]">Buy</a></button>
+    </div>
+</div>
+<div class="topGames">
+    <div class="card" *ngFor="let item of games">
+        <span class="favourite"><i class="fa-solid fa-bookmark"></i></span>
+        <img src="{{item.imageUrl}}" alt="">
+        <p>{{item.name}}</p>
+        <span class="typeofkey">{{item.status}}</span>
+        <span class="price">Price: {{item.price}} $</span>
+        <button><a [routerLink]="['chosenGame', item.id]">Buy</a></button>
+    </div>
+</div>
+<section class="categories-box">
+    <h2>Categories</h2>
+    <div class="types">
+        <div class="category-btn" *ngFor="let item of genres">
+            <span>5689</span>
+            <a [routerLink]="['/game/genre', item.id]">{{item.name}}</a>
+        </div>
+    </div>
+</section>
+    <footer>
+        <div class="menu-box">
+            <div class="info">
+                <div class="cols">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <a href="">Home</a>
+                        <a href="">About Us</a>
+                        <a href="">FAQs</a>
+                        <a href="">Services</a>
+                        <a href="">Contact</a>
+                    </ul>
+                </div>
+                <div class="cols">
+                    <h4>Services</h4>
+                    <ul>
+                        <a href="">Contact us</a>
+                        <a href="">Write us</a>
+                        <a href="">Call us</a>
+                    </ul>
+                </div>
+                <div class="cols">
+                    <h4>Address</h4>
+                    <p>Sofia, Bulgaria<br></p>
+                    <p>info@intime.com</p>
+                    <p>(01) 800 854 633</p>
+                </div>
+                <div class="cols">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <a href="">Home</a>
+                        <a href="">About Us</a>
+                        <a href="">FAQs</a>
+                        <a href="">Services</a>
+                        <a href="">Contact</a>
+                    </ul>
+                </div>
+                <div class="cols">
+                    <h4>Follow Us</h4>
+                    <a href="/facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="/instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="/twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+

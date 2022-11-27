@@ -1,0 +1,32 @@
+<nav>
+    <span class="logo"><i class="fa-solid fa-gamepad"></i>  GameingHub</span>
+</nav>
+<section>
+    <div class="login-menu">
+        <div class="register-box">
+            <h2>Login</h2>
+            <span>If you dont have an account? <a href="" routerLink="/register">Register</a></span>
+            <div class="social">
+                <button id="google"><i class="fa-brands fa-google"></i> Google</button>
+                <button id="facebook"><i class="fa-brands fa-facebook-f"></i> Facebook</button>
+                <button id="apple"><i class="fa-brands fa-apple"></i> Apple</button>
+            </div>
+            <div class="social-apps">
+                <a href=""><i class="fa-brands fa-steam-symbol"></i></a>
+                <a href=""><i class="fa-brands fa-discord"></i></a>
+                <a href=""><i class="fa-brands fa-twitch"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-vk"></i></a>
+            </div>
+            <div class="divider">
+                <hr class="left"/>or<hr class="right" />
+            </div>
+            <form action="submit" [formGroup]="loginForm" (ngSubmit)="loginSubmited()">
+                <input type="email" placeholder=" Email" formControlName="email" >
+                <input type="password" placeholder=" Password" formControlName="password">
+                <button>Login</button>
+            </form>
+            <a class="button" href="" routerLink="/">Go to <span>Home</span></a>
+        </div>
+    </div>
+</section>

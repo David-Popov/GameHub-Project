@@ -1,0 +1,57 @@
+.game-section{
+    margin-top: 15px;
+}
+
+.games-container{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    padding-top: 15px;
+}
+
+.card{
+    width: 220px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FEE715FF;
+    text-align: left;
+    color: white;
+    margin: 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    height: 250px;
+}
+
+.card span{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.card button{
+    width: 90%;
+    margin: auto;
+    background-color: #101820FF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    font-size: 1rem
+}
+
+.price{
+    color: #101820FF;
+}
+
+.typeofkey{
+    color: red;
+}
+
+.card p{
+    margin: 10px;
+    color: #101820FF;
+}

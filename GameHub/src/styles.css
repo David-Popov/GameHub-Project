@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+*{font-family: 'PT Sans', sans-serif;}
+html, body { height: 100%; background-color: #101820FF;}
+body {
+     margin: 0; 
+     min-height: 90vh;
+    }

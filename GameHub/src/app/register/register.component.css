@@ -1,0 +1,177 @@
+section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav{
+    width: 100%;
+    height: 60px;
+}
+
+nav span{
+    font-size: 2rem;
+    margin: 20px;
+    color: #FEE715FF;
+}
+
+.left-container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    
+}
+
+.register-box{
+    background-color: #FEE715FF;
+    margin: 20px;
+    width: 350px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #101820FF;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+    height: 300px;
+}
+
+form input{
+    width: 300px;
+    height: 55px;
+    margin: 10px;
+}
+
+.check-menu{
+    width: 100%;
+    display: block;
+    align-items: flex-end;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    
+
+}
+
+#check{
+    width: 20px;
+    height: 20px;
+}
+
+form button{
+    background-color: transparent;
+    border: 2px solid #101820FF;
+    cursor: pointer;
+    height: 60px;
+}
+
+form button:hover{
+    background-color: #fff;
+}
+
+.divider {
+	width:300px;
+	text-align:center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #101820FF;
+}
+
+.divider hr {
+	margin-left:auto;
+	margin-right:auto;
+	width:40%;
+    color: #101820FF;
+
+}
+
+.left {
+	float:left;
+}
+
+.right {
+	float:right;
+}
+
+.social{
+    display: flex;
+    margin-top: 10px;
+}
+
+.social button{
+    margin: 10px;
+    width: 90px;
+    height: 40px;
+}
+
+#google{
+    background-color: #fff;
+    color: #101820FF;
+    border: none;
+}
+
+#facebook{
+    background-color: #5266FC;
+    color: #fff;
+    border: none;
+}
+
+#apple{
+    border: none;
+    background-color: black;
+    color: #fff;
+}
+
+.social button{
+    cursor: pointer;
+
+}
+
+.social button i{
+    margin-right: 5px;
+
+}
+
+a{
+    text-decoration: none;
+    color: #101820FF;
+}
+
+.social-apps{
+    display: flex;
+    border: 2px solid #101820FF;
+    width: 90%;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.social-apps a{
+    color: #101820FF;
+    font-size: 2rem;
+    margin-right: 15px;
+}
+
+
+.social-apps a:hover{
+    color: #fff;
+}
+
+.button{
+    margin-top: 20px;
+    
+}
+
+.button span{
+    border-bottom: 2px solid #101820FF;
+}

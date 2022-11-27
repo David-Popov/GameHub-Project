@@ -1,0 +1,187 @@
+section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav{
+    width: 100%;
+    height: 60px;
+}
+
+nav span{
+    font-size: 2rem;
+    margin: 20px;
+    color: #FEE715FF;
+}
+
+.left-container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    
+}
+
+.register-box{
+    background-color: #FEE715FF;
+    margin: 20px;
+    width: 350px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #101820FF;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    height: 200px;
+    margin-top: 0%;
+}
+
+form input{
+    width: 300px;
+    height: 55px;
+    margin: 10px;
+}
+
+.check-menu{
+    width: 100%;
+    display: block;
+    align-items: flex-end;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#check{
+    width: 20px;
+    height: 20px;
+}
+
+form button{
+    background-color: transparent;
+    border: 2px solid #101820FF;
+    background-color: #101820FF;
+    color: #fff;
+    cursor: pointer;
+    height: 40px;
+    width: 300px;
+    font-size: 1.2rem;
+}
+
+form button:hover{
+    background-color: #fff;
+    color: #101820FF;
+}
+
+.divider {
+	width:300px;
+	text-align:center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #101820FF;
+    margin: 15px;
+}
+
+.divider hr {
+	margin-left:auto;
+	margin-right:auto;
+	width:40%;
+    color: #101820FF;
+
+}
+
+.left {
+	float:left;
+}
+
+.right {
+	float:right;
+}
+
+.social{
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+.social button{
+    margin: 10px;
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#google{
+    background-color: #fff;
+    color: #101820FF;
+    border: none;
+}
+
+#facebook{
+    background-color: #5266FC;
+    color: #fff;
+    border: none;
+}
+
+#apple{
+    border: none;
+    background-color: black;
+    color: #fff;
+}
+
+
+.social button i{
+    margin-right: 5px;
+
+}
+
+a{
+    text-decoration: none;
+    color: #101820FF;
+}
+
+.social-apps{
+    display: flex;
+    border: 2px solid #101820FF;
+    width: 85%;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.social-apps a{
+    color: #101820FF;
+    font-size: 2rem;
+    margin-right: 15px;
+}
+
+
+.social-apps a:hover{
+    color: #fff;
+}
+
+.button{
+    margin-top: 20px;
+    
+}
+
+.button span{
+    border-bottom: 2px solid #101820FF;
+}
+
+span a{
+    border-bottom: 2px solid #101820FF;
+}

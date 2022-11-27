@@ -1,0 +1,96 @@
+
+
+
+
+.edit-section{
+    min-height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.edit-container{
+    width: 90%;
+    margin: auto;
+    color: #101820FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left, .right{
+    width: 600px;
+    min-height: 90vh;
+}
+
+.left img {
+    width: 100%;
+    height: 700px;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    color: #101820FF;
+    border-radius: 10px;
+}
+
+.right h3{
+    margin: 15px;
+    font-size: 2rem;
+}
+
+.edit-form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.edit-form input{
+    margin: 15px;
+    height: 25px;
+    width: 300px;
+    color: #101820FF;
+}
+
+.edit-form button{
+    background-color: #101820FF;
+    border: none;
+    height: 30px;
+    width: 150px;
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons{
+    display: flex;
+}
+
+.buttons button{
+    margin: 15px;
+}
+
+.rows{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rows p{
+    padding: 20px;
+    margin-right: 15px;
+}
+
+mat-icon{
+    margin-left: 10px;
+}

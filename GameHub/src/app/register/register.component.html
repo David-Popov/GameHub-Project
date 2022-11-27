@@ -1,0 +1,42 @@
+<nav>
+    <span class="logo"><i class="fa-solid fa-gamepad"></i>  GameingHub</span>
+</nav>
+<section>
+    <div class="left-container">
+        <div class="register-box">
+            <h2>Create an account!</h2>
+            <span>Already have an account? <a href="">Login</a></span>
+            <form [formGroup]="registerForm" action="submit" (ngSubmit)="registerSubmited()">
+                <input type="email" placeholder=" Email" formControlName="email">
+                <input type="password" placeholder=" Password" formControlName="password" >
+                <input type="password" placeholder=" Repeat password" name="" id="" formControlName="repeatPass">
+                <label class="check-menu">
+                    <input type="checkbox" name="" id="check">
+                    <span>You are 18 or above!</span>
+                </label>
+                <label class="check-menu">
+                    <input type="checkbox" name="" id="check">
+                    <span>You agree to send adds!</span>
+                </label>
+                <button>Create account</button>
+            </form>
+            <div class="divider">
+                <hr class="left"/>or<hr class="right" />
+            </div>
+            <div class="social">
+                <button id="google"><i class="fa-brands fa-google"></i> Google</button>
+                <button id="facebook"><i class="fa-brands fa-facebook-f"></i> Facebook</button>
+                <button id="apple"><i class="fa-brands fa-apple"></i> Apple</button>
+            </div>
+            <div class="social-apps">
+                <a href=""><i class="fa-brands fa-steam-symbol"></i></a>
+                <a href=""><i class="fa-brands fa-discord"></i></a>
+                <a href=""><i class="fa-brands fa-twitch"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-vk"></i></a>
+            </div>
+            <a class="button" href="" routerLink="/login">Go to <span>Login</span></a>
+            <a class="button" href="" routerLink="/">Go to <span>Home</span></a>
+        </div>
+    </div>
+</section>

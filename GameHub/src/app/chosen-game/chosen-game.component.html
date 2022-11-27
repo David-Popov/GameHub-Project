@@ -1,0 +1,85 @@
+<app-navigation></app-navigation>
+<section class="game-box">
+    <img src="{{game.imageUrl}}" alt="" class="gameImg">
+    <div class="game-info">
+        <h2>{{game.name}}</h2>
+        <div class="rating">
+            <h3>Rating</h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+        </div>
+        <p>{{game.gameDescription}}</p>
+        <div class="key-information">
+            <div>
+                <span><i class="fa-solid fa-check"></i> {{game.status}}</span>
+                <p>Can be activated in Bulgaria</p>
+            </div>
+            <div>
+                <span><i class="fa-brands fa-battle-net"></i> Blizzard Entertainment</span>
+                <p>Can be activated on Battle.net launcher</p>
+            </div>
+            <div>
+                <span><i class="fa-solid fa-key"></i> Digital Key</span>
+                <p>This is a digital edition of the product (CD-KEY)</p>
+            </div>
+        </div>
+    </div>
+    <div class="game-price">
+        <h4>Selected Shop</h4>
+        <span class="fa fa-star checked"> {{game.rating}} Excellent Rating</span>
+        <span class="price">{{game.price}} $</span>
+        <div class="game-button">
+            <button>Buy Now</button>
+            <button class="add">Add to cart</button>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="menu-box">
+        <div class="info">
+            <div class="cols">
+                <h4>Quick Links</h4>
+                <ul>
+                    <a href="">Home</a>
+                    <a href="">About Us</a>
+                    <a href="">FAQs</a>
+                    <a href="">Services</a>
+                    <a href="">Contact</a>
+                </ul>
+            </div>
+            <div class="cols">
+                <h4>Services</h4>
+                <ul>
+                    <a href="">Contact us</a>
+                    <a href="">Write us</a>
+                    <a href="">Call us</a>
+                </ul>
+            </div>
+            <div class="cols">
+                <h4>Address</h4>
+                <p>Sofia, Bulgaria<br></p>
+                <p>info@intime.com</p>
+                <p>(01) 800 854 633</p>
+            </div>
+            <div class="cols">
+                <h4>Quick Links</h4>
+                <ul>
+                    <a href="">Home</a>
+                    <a href="">About Us</a>
+                    <a href="">FAQs</a>
+                    <a href="">Services</a>
+                    <a href="">Contact</a>
+                </ul>
+            </div>
+            <div class="cols">
+                <h4>Follow Us</h4>
+                <a href="/facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                <a href="/instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                <a href="/twitter.com"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>

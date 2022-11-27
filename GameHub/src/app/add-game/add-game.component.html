@@ -1,0 +1,91 @@
+<section class="edit-section">
+    <div class="edit-container">
+        <!-- <div class="left">
+            <img src="{{game.imageUrl}}" alt="">
+        </div> -->
+        <div class="right">
+            <h3>Edit Game</h3>
+            <form #form="ngForm" action="" class="edit-form" (ngSubmit)="addGame()">
+                <div class="rows">
+                    <p>
+                        <mat-form-field appearance="legacy">
+                          <mat-label>Name</mat-label>
+                          <input matInput placeholder="Placeholder" type="text" [(ngModel)] = "this.game.name" name="name">
+                          <mat-hint>Hint</mat-hint>
+                        </mat-form-field>
+                      </p>
+                      <p>
+                        <mat-form-field appearance="legacy">
+                          <mat-label>Price</mat-label>
+                          <input matInput placeholder="Placeholder" type="number" [(ngModel)] = "this.game.price" name="price">
+                          <mat-hint>Hint</mat-hint>
+                        </mat-form-field>
+                      </p>
+                </div>
+              <div class="rows">
+                <p>
+                    <mat-form-field appearance="legacy">
+                      <mat-label>ImageUrl</mat-label>
+                      <input matInput placeholder="Placeholder" type="text" [(ngModel)] = "this.game.imageUrl" name="imageUrl">
+                      <mat-hint>Hint</mat-hint>
+                    </mat-form-field>
+                  </p>
+                  <p>
+                    <mat-form-field appearance="legacy">
+                      <mat-label>Date</mat-label>
+                      <input matInput placeholder="Placeholder" type="text" [(ngModel)] = "this.game.date" name="date">
+                      <mat-hint>Hint</mat-hint>
+                    </mat-form-field>
+                  </p>
+              </div>
+              <div class="rows">
+                <p>
+                    <mat-form-field appearance="legacy">
+                      <mat-label>Rating</mat-label>
+                      <input matInput placeholder="Placeholder" type="number" [(ngModel)] = "this.game.rating" name="rating">
+                      <mat-hint>Hint</mat-hint>
+                    </mat-form-field>
+                  </p>
+                  <p>
+                    <mat-form-field appearance="legacy">
+                      <mat-label>Status</mat-label>
+                      <input matInput placeholder="Placeholder" type="text" [(ngModel)] = "this.game.status" name="status">
+                      <mat-hint>Hint</mat-hint>
+                    </mat-form-field>
+                  </p>
+              </div>
+              <div class="rows">
+                <p>
+                    <mat-form-field appearance="legacy">
+                      <mat-label>GenreId</mat-label>
+                      <input matInput placeholder="Placeholder" type="text" [(ngModel)] = "this.game.genreId" name="genreId">
+                      <mat-hint>Hint</mat-hint>
+                    </mat-form-field>
+                  </p>
+                  <p>
+                    <mat-form-field appearance="legacy">
+                      <mat-label>PlatformId</mat-label>
+                      <input matInput placeholder="Placeholder" type="text" [(ngModel)] = "this.game.platformId" name="platformId">
+                      <mat-hint>Hint</mat-hint>
+                    </mat-form-field>
+                  </p>
+              </div>
+              <div class="rows">
+                  <p>
+                    <mat-form-field appearance="legacy">
+                      <mat-label>Description</mat-label>
+                      <input matInput placeholder="Placeholder" type="text" [(ngModel)] = "this.game.gameDescription" name="gameDescription">
+                      <mat-hint>Hint</mat-hint>
+                    </mat-form-field>
+                  </p>
+              </div>
+                <div class="buttons">
+                    <button>Add<mat-icon>add </mat-icon></button>
+                </div>
+                <a routerLink="/admin">Go back</a>
+            </form>
+        </div>
+    </div>
+</section>
+
+

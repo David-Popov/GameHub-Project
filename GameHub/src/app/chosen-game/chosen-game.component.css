@@ -1,0 +1,157 @@
+.game-box{
+    min-height: 90vh;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    "gridImg game-info game-info game-price"
+    "gridImg game-info game-info game-price"
+    "gridImg game-info game-info game-price"
+    "gridImg game-info game-info game-price"
+    ;
+    background-color: #FEE715FF;
+    align-items: center;
+}
+
+.gameImg{
+    width: 280px;
+    height: 350px;
+    grid-area: gridImg;
+    margin: 15px;
+}
+
+.game-info{
+    grid-area: game-info;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.game-info h2{
+    font-size: 2rem;
+}
+
+.rating{
+    margin-top: 15px;
+}
+
+.rating h3{
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.game-info p{
+    font-size: 1.2rem;
+    margin: 10px;
+}
+
+.game-price{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 300px;
+    background-color: #101820FF;
+    color: #fff;
+    grid-area: game-price;
+    margin: 20px;
+    justify-content: center;
+}
+
+.game-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-price h4{
+    margin: 15px;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.game-price .checked{
+    margin: 15px;
+}
+
+.game-price .price{
+    font-size: 2.5rem;
+    margin: 15px;
+}
+
+.game-price button{
+    margin: 10px;
+    width: 90%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+}
+
+.game-price .add{
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.key-information{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+}
+
+.key-information div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1rem;
+    height: 120px;
+    border-bottom: 2px solid #101820FF;
+}
+
+.key-information div span{
+    margin-bottom: 15px;
+}
+
+footer{
+    background-color: #101820FF;
+    width: 100%;
+}
+
+.info{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(5, 1fr);
+    height: 200px;
+    margin: 10px;
+
+}
+
+.cols{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.cols ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
+    
+}
+
+.cols a{
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 5px;
+}
+
+
+
+
+
+.checked {
+    color: orange;
+}

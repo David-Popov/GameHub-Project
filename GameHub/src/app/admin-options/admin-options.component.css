@@ -1,0 +1,33 @@
+.admin-section{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+}
+
+.admin-menu{
+    width: 20%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    border: 2px solid #101820FF;
+    background-color: #FEE715FF;
+}
+
+.admin-menu a{
+    color: #101820FF;
+    text-decoration: none;
+    margin: 15px;
+    font-size: 2rem;
+}
+
+.admin-menu button{
+    width: 140px;
+    background-color: #101820FF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}

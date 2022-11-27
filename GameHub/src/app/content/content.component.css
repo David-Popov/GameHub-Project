@@ -1,0 +1,208 @@
+.content{
+    background-color: #FEE715FF;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.card{
+    width: 220px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FEE715FF;
+    text-align: left;
+    color: white;
+    margin: 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+.content .card{
+    width: 220px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: #101820FF;
+    text-align: left;
+    color: white;
+    margin: 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+
+.card img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    height: 250px;
+}
+
+.card span{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.card button{
+    width: 90%;
+    margin: auto;
+    background-color: #101820FF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    font-size: 1rem
+}
+
+.price{
+    color: #101820FF;
+}
+
+.typeofkey{
+    color: red;
+}
+
+.card p{
+    margin: 10px;
+    color: #101820FF;
+}
+
+.content .price{
+    color: #fff;
+}
+
+.typeofkey{
+    color: red;
+}
+
+.content .card p{
+    margin: 10px;
+    color: #fff;
+}
+
+.content .card button{
+    width: 90%;
+    margin: auto;
+    background-color: #fff;
+    color: #101820FF;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    font-size: 1rem
+}
+
+.topGames{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #101820FF;
+}
+
+.categories-box{
+    background: #FEE715FF   ;  /* fallback for old browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.types{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+}
+
+.category-btn{
+    margin: 20px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #101820FF;
+    box-shadow:  -10px 10px 20px rgba(0,0,0,0.3);
+    text-align: center;
+    color: #fff;
+}
+
+
+.category-btn:hover{
+    background-color: #fff;
+    color: #101820FF !important;
+}
+
+.category-btn a{
+    margin: 15px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+
+
+footer{
+    background-color: #101820FF;
+    width: 100%;
+}
+
+.info{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(5, 1fr);
+    height: 200px;
+    margin: 10px;
+
+}
+
+.cols{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.cols ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
+    
+}
+
+.cols a{
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 5px;
+}
+
+
+.favourite{
+    display: none;
+    position: absolute;
+    right: 10%;
+    top: 3%;
+    color: #FEE715FF;
+    cursor: pointer;
+    
+}
+
+.favourite i{
+    font-size: 1.6rem;
+}
+
+.card:hover .favourite{
+    display: block;
+}
+
+.category-btn:hover a{
+    color: #101820FF;
+}
