@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "4RYjELD1WcZEHleAyG5yoJY61tdB172jIXXVncfPG3g=",
+  "Source": "GameHubPortalApi",
+  "BasePath": "_content/GameHubPortalApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
