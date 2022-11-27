@@ -1,4 +1,3 @@
-
 <app-navigation></app-navigation>
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
     <div class="carousel-indicators">
@@ -27,7 +26,7 @@
     </button>
   </div>
 <div class="content">
-    <div class="card" *ngFor="let item of games">
+    <div class="card" *ngFor="let item of games.slice(0, 10);">
         <span class="favourite"><i class="fa-solid fa-bookmark"></i></span>
         <img src="{{item.imageUrl}}" alt="">
         <p>{{item.name}}</p>
@@ -36,8 +35,9 @@
         <button><a [routerLink]="['chosenGame', item.id]">Buy</a></button>
     </div>
 </div>
+<h2 class="topGames-tittle">Top Games</h2>
 <div class="topGames">
-    <div class="card" *ngFor="let item of games">
+    <div class="card"  *ngFor="let item of games.slice(0, 10);">
         <span class="favourite"><i class="fa-solid fa-bookmark"></i></span>
         <img src="{{item.imageUrl}}" alt="">
         <p>{{item.name}}</p>

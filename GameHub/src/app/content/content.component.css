@@ -206,3 +206,10 @@ footer{
 .category-btn:hover a{
     color: #101820FF;
 }
+
+.topGames-tittle{
+    text-align: center;
+    color: #fff;
+    font-size: 1.8rem;
+    margin-top: 10px;
+}

@@ -15,6 +15,7 @@ export class AllGamesComponent implements OnInit {
   displayedColumns: string[] = ['name', 'price', 'imageUrl', 'date','rating','status',
   'platformId','genreId','edit'];
   dataSource: MatTableDataSource<Game> = new MatTableDataSource<Game>();
+  filterString = '';
 
   @ViewChild(MatPaginator) matPaginator!: MatPaginator
 
@@ -35,6 +36,11 @@ export class AllGamesComponent implements OnInit {
          console.log(errorResponse);
        }
     )
+  }
+
+
+  filterGames(){
+     this.dataSource.filter = this.filterString.trim().toLowerCase();
   }
 
 }

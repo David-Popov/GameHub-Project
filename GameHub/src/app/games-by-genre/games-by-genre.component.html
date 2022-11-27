@@ -6,7 +6,7 @@
             <p>{{item.name}}</p>
             <span class="typeofkey">{{item.status}}</span>
             <span class="price">Price: {{item.price}} $</span>
-            <button><a [routerLink]="['game', item.id]">Buy</a></button>
+            <button><a [routerLink]="['/chosenGame', item.id]">Buy</a></button>
         </div>
     </div>
 </section>
