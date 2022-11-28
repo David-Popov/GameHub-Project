@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutUsComponent } from './about-us/about-us.component';
 import { AddGameComponent } from './add-game/add-game.component';
 import { AdminOptionsComponent } from './admin-options/admin-options.component';
 import { AllGamesComponent } from './all-games/all-games.component';
@@ -61,6 +62,10 @@ const routes: Routes = [
   {
     path: 'game/platform/:id',
     component: GamesByPlatformComponent
+  },
+  {
+    path: 'aboutUs',
+    component: AboutUsComponent
   }
 
 ];

@@ -10,8 +10,6 @@ namespace GameHubPortalApi.EntityModels
         public string? Password { get; set; }
         public string? Role { get; set; }
 
-        public byte[] PasswordHash { get; set; }
-        public byte[] PasswordSalt { get; set; }
 
         public List<Game> FavouriteGames { get; set; } = new List<Game>();
     }

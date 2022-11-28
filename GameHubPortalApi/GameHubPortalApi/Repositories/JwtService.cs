@@ -1,7 +1,10 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using GameHubPortalApi.DataModels;
+using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using System.Net.Http.Json;
 using System.Security.Claims;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace GameHubPortalApi.Repositories
 {
@@ -30,7 +33,8 @@ namespace GameHubPortalApi.Repositories
                 new Claim("id", id),
                 new Claim("email", email),
                 new Claim("password", password),
-                new Claim("role", role)
+                new Claim("role", role),
+                
             };
 
 
