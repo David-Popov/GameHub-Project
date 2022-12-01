@@ -1,4 +1,5 @@
 using GameHubPortalApi.DataModels;
+using GameHubPortalApi.Infrastructure;
 using GameHubPortalApi.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -53,6 +54,8 @@ builder.Services.AddAuthentication(x =>
 
 
 var app = builder.Build();
+
+app.PrepareDatabase();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
