@@ -15,6 +15,8 @@ namespace GameHubPortalApi.Repositories
         Task<List<Game>> GetGamesByGenre(int id);
         Task<Game> AddGame(Game request);
 
+        User GetCurrentUser(string email);
+
 
         public void CreatePasswordHash(string password, out byte[]passwordHash,out byte[]passwordSalt);
 

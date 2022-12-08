@@ -1,0 +1,12 @@
+<app-navigation></app-navigation>
+<section class="games-section">
+    <div class="games-container">
+        <div class="card" *ngFor="let item of user.favouriteGames">
+            <img src="{{item.imageUrl}}" alt="">
+            <p>{{item.name}}</p>
+            <span class="typeofkey">{{item.status}}</span>
+            <span class="price">Price: {{item.price}} $</span>
+            <button><a [routerLink]="['/chosenGame', item.id]">Buy</a></button>
+        </div>
+    </div>
+</section>

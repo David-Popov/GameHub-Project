@@ -73,6 +73,23 @@ namespace GameHubPortalApi.Repositories
             return await platforms;
         }
 
+        public User GetCurrentUser(string email)
+        {
+            var user = db.User
+                .Select(x => new User
+                {
+                    Email = x.Email,
+                    Password = x.Password,
+                    Role = x.Role,
+                    FavouriteGames = x.FavouriteGames
+                   
+                })
+                .Where(x => x.Email == email)
+                .FirstOrDefault();
+
+            return user;
+        }
+
         public async Task<List<Game>> GetGameByGenre(int genreId)
         {
             var gamesByGenre = db.Game.Select(x => new Game

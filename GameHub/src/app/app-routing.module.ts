@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { ChosenGameComponent } from './chosen-game/chosen-game.component';
 import { ContentComponent } from './content/content.component';
 import { EditGameComponent } from './edit-game/edit-game.component';
+import { FavouriteGamesComponent } from './favourite-games/favourite-games.component';
 import { GameComponent } from './game/game.component';
 import { GamesByGenreComponent } from './games-by-genre/games-by-genre.component';
 import { GamesByPlatformComponent } from './games-by-platform/games-by-platform.component';
@@ -66,6 +67,10 @@ const routes: Routes = [
   {
     path: 'aboutUs',
     component: AboutUsComponent
+  },
+  {
+    path: 'favourite',
+    component: FavouriteGamesComponent
   }
 
 ];

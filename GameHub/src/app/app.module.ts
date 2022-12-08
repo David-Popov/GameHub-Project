@@ -66,6 +66,7 @@ import { GamesByPlatformComponent } from './games-by-platform/games-by-platform.
 import { GamesByGenreComponent } from './games-by-genre/games-by-genre.component';
 import { ChosenGameComponent } from './chosen-game/chosen-game.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { FavouriteGamesComponent } from './favourite-games/favourite-games.component';
 
 @NgModule({
   declarations: [
@@ -84,6 +85,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
     GamesByGenreComponent,
     ChosenGameComponent,
     AboutUsComponent,
+    FavouriteGamesComponent,
     
   ],
   imports: [

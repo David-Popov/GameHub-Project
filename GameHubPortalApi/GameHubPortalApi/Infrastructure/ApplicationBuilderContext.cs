@@ -98,5 +98,17 @@ namespace GameHubPortalApi.Infrastructure
 
             db.SaveChanges();
         }
+
+        private static void SeedUsers(GameHubDbContext db)
+        {
+            db.User.AddRange(new[]
+            {
+                new User {Email = "admin@gmail.com", Password = "admin1234", Role = "Admin"},
+                new User {Email = "user1@gmail.com", Password = "user1", Role = "User"},
+                new User {Email = "user2@gmail.com", Password = "user2", Role = "User"},
+            });
+
+            db.SaveChanges();
+        }
     }
 }

@@ -1,8 +1,9 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { User } from './models/api-models/User';
 
 @Injectable({
   providedIn: 'root'
@@ -36,6 +37,8 @@ export class AuthService {
     this.loadCurrentUser();
 
   }
+
+ 
 
   loadCurrentUser(){
     const token = localStorage.getItem("access_token");
@@ -81,5 +84,11 @@ export class AuthService {
       return false;
     }
   }
-  
+ 
+  getCurrUser() : Observable<User>{
+    let queryParams = new HttpParams();
+    queryParams = queryParams.append("currentEmail",this.currEmail);
+
+    return this.http.get<User>(this.baseUiUrl + "/User/Favourite",{params: queryParams})
+  }
 }

@@ -57,7 +57,20 @@ namespace GameHubPortalApi.Controllers
                     ));
             }
             return Ok("Failure");
+        }
 
+        [HttpGet]
+        [Route("[controller]/Favourite")]
+        public IActionResult GetCurrentUser([FromQuery]string currentEmail)
+        {
+            var currUser = rep.GetCurrentUser(currentEmail);
+
+            if (currUser != null)
+            {
+                return Ok(currUser);
+            }
+
+            return Ok("Failure");
         }
     }
 }
