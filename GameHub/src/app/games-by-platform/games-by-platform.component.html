@@ -3,6 +3,7 @@
     <div class="games-container">
         <div class="card" *ngFor="let item of games">
             <img src="{{item.imageUrl}}" alt="">
+            <span *ngIf="this.authService.isLoggedIn()" class="favourite"><i class="fa-solid fa-bookmark"></i></span>
             <p>{{item.name}}</p>
             <span class="typeofkey">{{item.status}}</span>
             <span class="price">Price: {{item.price}} $</span>

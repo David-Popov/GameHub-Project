@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Game } from '../models/api-models/Game';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -58,4 +58,6 @@ export class ContentService {
   getGameByPlatform(platformId:string) : Observable<Game[]>{
     return this.http.get<Game[]>(this.baseUiUrl + '/game/platform/' + platformId);
   }
+
+
 }

@@ -50,3 +50,21 @@
     margin: 10px;
     color: #101820FF;
 }
+
+.favourite{
+    display: none;
+    position: absolute;
+    right: 10%;
+    top: 3%;
+    color: #FEE715FF;
+    cursor: pointer;
+    
+}
+
+.favourite i{
+    font-size: 1.6rem;
+}
+
+.card:hover .favourite{
+    display: block;
+}

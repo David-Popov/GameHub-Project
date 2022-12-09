@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { addGameModel } from './models/api-models/addGameModel';
+import { Game } from './models/api-models/Game';
 import { User } from './models/api-models/User';
 
 @Injectable({
@@ -90,5 +92,12 @@ export class AuthService {
     queryParams = queryParams.append("currentEmail",this.currEmail);
 
     return this.http.get<User>(this.baseUiUrl + "/User/Favourite",{params: queryParams})
+  }
+
+  addFavouriteGame(gameId:string) :Observable<any>{
+    let queryParams = new HttpParams();
+    queryParams = queryParams.append("currentEmail",this.currEmail);
+
+    return this.http.post<any>(this.baseUiUrl + '/User/AddFavouriteGame/' + gameId,'')
   }
 }

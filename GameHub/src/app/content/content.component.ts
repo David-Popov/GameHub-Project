@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 import { Game } from '../models/api-models/Game';
 import { Genre } from '../models/api-models/Genre';
 import { ContentService } from './content.service';
@@ -15,13 +17,16 @@ export class ContentComponent implements OnInit {
   games: Game[] = [];
   genres: Genre[] = [];
   filterString = '';
+  gameId!: string;
+
 
   dataSource: MatTableDataSource<Game> = new MatTableDataSource<Game>();
 
-
-  constructor(private contentService: ContentService) { }
+  constructor(private contentService: ContentService, public authService: AuthService,
+    private router:Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    
     this.contentService.getAllGames()
     .subscribe(
       (successResponse) => {

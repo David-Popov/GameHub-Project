@@ -24,5 +24,6 @@ namespace GameHubPortalApi.DataModels
         public int PlatformId { get; set; }
 
         public Platform Platform { get; set; }
+
     }
 }

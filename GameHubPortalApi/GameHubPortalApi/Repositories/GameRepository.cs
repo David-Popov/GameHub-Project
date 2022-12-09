@@ -15,6 +15,25 @@ namespace GameHubPortalApi.Repositories
             this.db = db;
         }
 
+        public void AddFavouriteGame(string email,Game game)
+        {
+            var user = db.User
+               .Select(x => new User
+               {
+                   Email = x.Email,
+                   Password = x.Password,
+                   Role = x.Role,
+                   FavouriteGames = x.FavouriteGames
+
+               })
+               .Where(x => x.Email == email)
+               .FirstOrDefault();
+            
+            user.FavouriteGames.Add(game);
+
+            db.SaveChanges();
+        }
+
         public async Task<Game> AddGame(Game request)
         {
             var game = await db.Game.AddAsync(request);

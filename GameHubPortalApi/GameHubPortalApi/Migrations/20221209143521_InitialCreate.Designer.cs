@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GameHubPortalApi.Migrations
 {
     [DbContext(typeof(GameHubDbContext))]
-    [Migration("20221122090112_InitialCreate")]
+    [Migration("20221209143521_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

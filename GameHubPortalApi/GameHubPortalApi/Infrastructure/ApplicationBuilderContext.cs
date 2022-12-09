@@ -16,6 +16,7 @@ namespace GameHubPortalApi.Infrastructure
             SeedGenres(data);
             SeedPlatforms(data);
             SeedGames(data);
+            SeedUsers(data);
             return app;
 
         }
@@ -101,6 +102,11 @@ namespace GameHubPortalApi.Infrastructure
 
         private static void SeedUsers(GameHubDbContext db)
         {
+            if (db.User.Any())
+            {
+                return;
+            }
+
             db.User.AddRange(new[]
             {
                 new User {Email = "admin@gmail.com", Password = "admin1234", Role = "Admin"},

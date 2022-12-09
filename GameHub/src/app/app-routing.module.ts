@@ -71,7 +71,11 @@ const routes: Routes = [
   {
     path: 'favourite',
     component: FavouriteGamesComponent
-  }
+  },
+  {
+    path: 'User/AddFavouriteGame/:id',
+    component: FavouriteGamesComponent
+  },
 
 ];
 

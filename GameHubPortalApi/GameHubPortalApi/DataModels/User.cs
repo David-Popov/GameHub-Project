@@ -9,5 +9,7 @@
         public string? Role { get; set; }
 
         public List<Game> FavouriteGames { get; set; } = new List<Game>();
+
+
     }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 import { ContentService } from '../content/content.service';
 import { Game } from '../models/api-models/Game';
 
@@ -15,18 +16,16 @@ export class GamesByPlatformComponent implements OnInit {
 
 
   constructor(private contentService: ContentService, 
-    private route: ActivatedRoute,private router: Router) { }
+    private route: ActivatedRoute,private router: Router, public authService: AuthService) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(
       (param) => {
         this.platformId = param.get("id")!
-        console.log(this.platformId)
         if (this.platformId) {
           this.contentService.getGameByPlatform(this.platformId).subscribe(
             (successResponse) => {
               this.games = successResponse;
-              console.log(this.games)
             },
             (errResponse) =>{
               console.log(errResponse);

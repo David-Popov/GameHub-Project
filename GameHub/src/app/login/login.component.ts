@@ -35,7 +35,6 @@ export class LoginComponent implements OnInit {
           this.isUserValid = true;
           this.loginService.setToken(res)
           this.router.navigateByUrl("/")
-          alert("Login successful")
         }
       })
   }

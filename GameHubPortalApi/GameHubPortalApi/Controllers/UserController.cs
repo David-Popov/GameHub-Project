@@ -72,5 +72,17 @@ namespace GameHubPortalApi.Controllers
 
             return Ok("Failure");
         }
+
+        [HttpPost]
+        [Route("[controller]/AddFavouriteGame/{gameId:int}")]
+        public async Task<IActionResult> AddFavouriteGame( [FromRoute] int gameId)
+        {
+            var game = await db.Game.FindAsync(gameId);
+            string currentEmail = "didicko2003@gmail.com";
+
+            
+            rep.AddFavouriteGame(currentEmail,game);
+            return Ok("End");
+        }
     }
 }

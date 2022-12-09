@@ -43,11 +43,7 @@ export class FavouriteGamesComponent implements OnInit {
     .subscribe(
       (success) => {
         this.user = success;
-        console.log(this.user)
       }
     )
   }
-
-
-
 }

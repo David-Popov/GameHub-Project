@@ -46,7 +46,6 @@ export class GameComponent implements OnInit {
           this.contentService.getGame(this.gameId).subscribe(
             (successResponse) => {
               this.game = successResponse;
-              console.log(this.game)
             }
           )
         }

@@ -27,7 +27,7 @@
   </div>
 <div class="content">
     <div class="card" *ngFor="let item of games.slice(0, 10);">
-        <span class="favourite"><i class="fa-solid fa-bookmark"></i></span>
+        <span *ngIf="this.authService.isLoggedIn()" class="favourite"><i class="fa-solid fa-bookmark"></i></span>
         <img src="{{item.imageUrl}}" alt="">
         <p>{{item.name}}</p>
         <span class="typeofkey">{{item.status}}</span>
@@ -38,7 +38,7 @@
 <h2 class="topGames-tittle">Top Games</h2>
 <div class="topGames">
     <div class="card"  *ngFor="let item of games.slice(0, 10);">
-        <span class="favourite"><i class="fa-solid fa-bookmark"></i></span>
+        <a *ngIf="this.authService.isLoggedIn()" [routerLink]="['/User/AddFavouriteGame/',item.id]" class="favourite"><i class="fa-solid fa-bookmark"></i></a>
         <img src="{{item.imageUrl}}" alt="">
         <p>{{item.name}}</p>
         <span class="typeofkey">{{item.status}}</span>
