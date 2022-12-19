@@ -20,7 +20,6 @@ export class ContentComponent implements OnInit {
   gameId!: string;
 
 
-  dataSource: MatTableDataSource<Game> = new MatTableDataSource<Game>();
 
   constructor(private contentService: ContentService, public authService: AuthService,
     private router:Router, private route: ActivatedRoute) { }
@@ -31,7 +30,6 @@ export class ContentComponent implements OnInit {
     .subscribe(
       (successResponse) => {
         this.games = successResponse;
-        this.dataSource = new MatTableDataSource<Game>(this.games)
        },
        (errorResponse) => {
          console.log(errorResponse);
@@ -49,7 +47,5 @@ export class ContentComponent implements OnInit {
     )
   }
 
-  filterGames(){
-    this.dataSource.filter = this.filterString.trim().toLowerCase();
- }
+  
 }

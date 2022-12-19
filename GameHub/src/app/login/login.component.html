@@ -23,8 +23,10 @@
             </div>
             <form action="submit" [formGroup]="loginForm" (ngSubmit)="loginSubmited()">
                 <input type="email" placeholder=" Email" formControlName="email" >
+                <div class="form-text text-danger text-center" *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)">Email required</div>
                 <input type="password" placeholder=" Password" formControlName="password">
-                <button>Login</button>
+                <div class="form-text text-danger text-center" *ngIf="Password.errors?.['required'] && (Password.touched || Password.dirty)">Password required</div>
+                <button type="submit">Login</button>
             </form>
             <a class="button" href="" routerLink="/">Go to <span>Home</span></a>
         </div>

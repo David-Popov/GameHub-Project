@@ -36,7 +36,7 @@ export class FavouriteGamesComponent implements OnInit {
     }]
   }
 
-  constructor(private service: AuthService) { }
+  constructor(public service: AuthService) { }
 
   ngOnInit(): void {
     this.service.getCurrUser()

@@ -8,17 +8,21 @@
             <span>Already have an account? <a href="">Login</a></span>
             <form [formGroup]="registerForm" action="submit" (ngSubmit)="registerSubmited()">
                 <input type="email" placeholder=" Email" formControlName="email">
-                <input type="password" placeholder=" Password" formControlName="password" >
+                <div class="form-text text-danger text-center" *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)">Email required</div>
+                <input type="password" placeholder="  Password" formControlName="password" >
+                <div class="form-text text-danger text-center" *ngIf="Password.errors?.['required'] && (Password.touched || Password.dirty)">Password required</div>
                 <input type="password" placeholder=" Repeat password" name="" id="" formControlName="repeatPass">
+                <div class="form-text text-danger text-center" *ngIf="RepeatPassword.errors?.['required'] && (RepeatPassword.touched || RepeatPassword.dirty)">Repeat password required</div>
                 <label class="check-menu">
-                    <input type="checkbox" name="" id="check">
+                    <input type="checkbox" value="f" formControlName="isEighteen" name="" id="check">
                     <span>You are 18 or above!</span>
                 </label>
+                <div class="form-text text-danger text-left" *ngIf="IsEighteen.errors?.['required']">Required</div>
                 <label class="check-menu">
-                    <input type="checkbox" name="" id="check">
+                    <input type="checkbox" value="f" formControlName="isEighteen" name="" id="check">
                     <span>You agree to send adds!</span>
                 </label>
-                <button>Create account</button>
+                <button type="submit" >Create account</button>
             </form>
             <div class="divider">
                 <hr class="left"/>or<hr class="right" />

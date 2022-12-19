@@ -22,21 +22,28 @@ export class LoginComponent implements OnInit {
   isUserValid: boolean = false;
 
   loginSubmited(){
-    this.loginService.loginUser(
-      [
-        this.loginForm.value.email!,
-        this.loginForm.value.password!,
-      ]).subscribe(res => {
-        if (res == "Failure") {
-          this.isUserValid = false;
-          alert("Login unseccessful")
-        }
-        else{
-          this.isUserValid = true;
-          this.loginService.setToken(res)
-          this.router.navigateByUrl("/")
-        }
-      })
+    if (this.Email.value != '' && this.Password.value != '') {
+      this.loginService.loginUser(
+        [
+          this.loginForm.value.email!,
+          this.loginForm.value.password!,
+        ]).subscribe(res => {
+          if (res == "Failure") {
+            this.isUserValid = false;
+            alert("Login unseccessful")
+          }
+          else{
+            alert('Login successful!')
+            this.isUserValid = true;
+            this.loginService.setToken(res)
+            this.router.navigateByUrl("/")
+          }
+        })
+    }
+    else{
+      alert('Please enter email and password')
+    }
+    
   }
   
 

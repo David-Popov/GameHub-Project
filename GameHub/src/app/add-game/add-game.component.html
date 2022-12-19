@@ -4,7 +4,7 @@
             <img src="{{game.imageUrl}}" alt="">
         </div> -->
         <div class="right">
-            <h3>Edit Game</h3>
+            <h3>Add new Game</h3>
             <form #form="ngForm" action="" class="edit-form" (ngSubmit)="addGame()">
                 <div class="rows">
                     <p>
@@ -33,7 +33,9 @@
                   <p>
                     <mat-form-field appearance="legacy">
                       <mat-label>Date</mat-label>
-                      <input matInput placeholder="Placeholder" type="text" [(ngModel)] = "this.game.date" name="date">
+                      <input matInput [matDatepicker]="picker" placeholder="Placeholder" type="text" [(ngModel)] = "this.game.date " name="date">
+                      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                      <mat-datepicker #picker></mat-datepicker>
                       <mat-hint>Hint</mat-hint>
                     </mat-form-field>
                   </p>

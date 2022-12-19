@@ -20,9 +20,11 @@ export class RegisterComponent implements OnInit {
 
 
   registerForm = new FormGroup({
-    email: new FormControl("",[Validators.required]),
-    password: new FormControl("",[Validators.required]),
-    repeatPass: new FormControl("")
+    email: new FormControl("",[Validators.required,Validators.minLength(2),Validators.pattern("[a-zA-Z].*")]),
+    password: new FormControl("",[Validators.required,Validators.minLength(5)]),
+    repeatPass: new FormControl("",[Validators.required,Validators.minLength(5)]),
+    isEighteen: new FormControl("",[Validators.required])
+
   })
 
   get Email(): FormControl{
@@ -34,10 +36,12 @@ export class RegisterComponent implements OnInit {
   get RepeatPassword(): FormControl{
     return this.registerForm.get("repeatPass") as FormControl;
   }
+  get IsEighteen(): FormControl{
+    return this.registerForm.get("isEighteen") as FormControl;
+  }
 
   registerSubmited(){
-    if (this.Password.value == this.RepeatPassword.value) {
-      console.log('Submit');
+    if (this.Password.value == this.RepeatPassword.value && this.Email.value != "" && this.Password.value != "" && this.RepeatPassword.value != "") {
       this.repeatPass = 'none'
 
       this.authService.registerUser([
@@ -48,12 +52,14 @@ export class RegisterComponent implements OnInit {
           alert("Register unseccessful")
         }
         else{
+          alert('Succesfuly registered user!')
           this.router.navigateByUrl("/login")
         }
       })
     }
     else{
       this.repeatPass = 'inline';
+      alert('Password and Confirm password dont match!');
     }
     
 

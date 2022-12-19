@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ContentService } from '../content/content.service';
 import { Game } from '../models/api-models/Game';
 
@@ -30,7 +31,7 @@ export class AddGameComponent implements OnInit {
     }
   }
 
-  constructor(private service: ContentService) { }
+  constructor(public service: ContentService,private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -40,6 +41,8 @@ export class AddGameComponent implements OnInit {
     .subscribe(
       (successRes) => {
         console.log(successRes)
+        this.router.navigateByUrl("/admin")
+
       }
     );
   }

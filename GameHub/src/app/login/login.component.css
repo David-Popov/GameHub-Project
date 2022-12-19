@@ -78,6 +78,14 @@ form button{
     height: 40px;
     width: 300px;
     font-size: 1.2rem;
+    margin-top: 30px;
+}
+
+.text-danger{
+    height: 30px;
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
 }
 
 form button:hover{
