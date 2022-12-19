@@ -26,7 +26,7 @@
                 <div class="form-text text-danger text-center" *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)">Email required</div>
                 <input type="password" placeholder=" Password" formControlName="password">
                 <div class="form-text text-danger text-center" *ngIf="Password.errors?.['required'] && (Password.touched || Password.dirty)">Password required</div>
-                <button type="submit">Login</button>
+                <button type="submit" [disabled]="loginForm.invalid">Login</button>
             </form>
             <a class="button" href="" routerLink="/">Go to <span>Home</span></a>
         </div>

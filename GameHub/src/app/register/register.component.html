@@ -22,7 +22,7 @@
                     <input type="checkbox" value="f" formControlName="isEighteen" name="" id="check">
                     <span>You agree to send adds!</span>
                 </label>
-                <button type="submit" >Create account</button>
+                <button type="submit" [disabled]="registerForm.invalid">Create account</button>
             </form>
             <div class="divider">
                 <hr class="left"/>or<hr class="right" />
