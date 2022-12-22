@@ -25,29 +25,34 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-<div class="content">
-    <div class="card" *ngFor="let item of games.slice(0, 10);">
-        <span *ngIf="this.authService.isLoggedIn()" class="favourite"><i class="fa-solid fa-bookmark"></i></span>
-        <img src="{{item.imageUrl}}" alt="">
-        <p>{{item.name}}</p>
-        <span class="typeofkey">{{item.status}}</span>
-        <span class="price">Price: {{item.price}} $</span>
-        <button><a [routerLink]="['chosenGame', item.id]">Buy</a></button>
+  <section class="popular">
+    <h2 class="popular-title">Popular Games</h2>
+    <div class="content">
+        <div class="card" *ngFor="let item of games.slice(0, 10);">
+            <span *ngIf="this.authService.isLoggedIn()" class="favourite"><i class="fa-solid fa-bookmark"></i></span>
+            <img src="{{item.imageUrl}}" alt="">
+            <p>{{item.name}}</p>
+            <span class="typeofkey">{{item.status}}</span>
+            <span class="price">Price: {{item.price}} $</span>
+            <button><a [routerLink]="['chosenGame', item.id]">Buy</a></button>
+        </div>
     </div>
-</div>
-<h2 class="topGames-tittle">Top Games</h2>
-<div class="topGames">
-    <div class="card"  *ngFor="let item of games.slice(0, 10);">
-        <a *ngIf="this.authService.isLoggedIn()" [routerLink]="['/User/AddFavouriteGame/',item.id]" class="favourite"><i class="fa-solid fa-bookmark"></i></a>
-        <img src="{{item.imageUrl}}" alt="">
-        <p>{{item.name}}</p>
-        <span class="typeofkey">{{item.status}}</span>
-        <span class="price">Price: {{item.price}} $</span>
-        <button><a [routerLink]="['chosenGame', item.id]">Buy</a></button>
+  </section>
+  <section class="top-games">
+    <h2 class="topGames-title">Top Games</h2>
+    <div class="content1">
+        <div class="card"  *ngFor="let item of games.slice(0, 10);">
+            <a *ngIf="this.authService.isLoggedIn()" [routerLink]="['/User/AddFavouriteGame/',item.id]" class="favourite"><i class="fa-solid fa-bookmark"></i></a>
+            <img src="{{item.imageUrl}}" alt="">
+            <p>{{item.name}}</p>
+            <span class="typeofkey">{{item.status}}</span>
+            <span class="price">Price: {{item.price}} $</span>
+            <button><a [routerLink]="['chosenGame', item.id]">Buy</a></button>
+        </div>
     </div>
-</div>
+  </section>
 <section class="categories-box">
-    <h2>Categories</h2>
+    <h2 class="categories-title">Categories</h2>
     <div class="types">
         <div class="category-btn" *ngFor="let item of genres">
             <span>5689</span>
@@ -55,39 +60,5 @@
         </div>
     </div>
 </section>
-    <footer>
-        <div class="menu-box">
-            <div class="info">
-                <div class="cols">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <a routerLink="/">Home</a>
-                        <a routerLink="/aboutUs">About Us</a>
-                        <a href="">Services</a>
-                        <a href="">Contact</a>
-                    </ul>
-                </div>
-                <div class="cols">
-                    <h4>Services</h4>
-                    <ul>
-                        <a href="">Contact us</a>
-                        <a href="">Write us</a>
-                        <a href="">Call us</a>
-                    </ul>
-                </div>
-                <div class="cols">
-                    <h4>Address</h4>
-                    <p>Sofia, Bulgaria<br></p>
-                    <p>didicko033@gmail.com</p>
-                    <p>+359 800 854 633</p>
-                </div>
-                <div class="cols">
-                    <h4>Follow Us</h4>
-                    <a href="//facebook.com"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="//instagram.com"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="//twitter.com"><i class="fa-brands fa-twitter"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
+<app-footer></app-footer>
 

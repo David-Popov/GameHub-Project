@@ -1,16 +1,24 @@
-<nav>
-    <span class="logo"><i class="fa-solid fa-gamepad"></i>  GameingHub</span>
-</nav>
+<app-navigation></app-navigation>
+
 <section>
+    <div class="right-container">
+        <div id="center">
+            <span class="title">Hi!</span>
+            <span class="title">It's nice to see</span>
+            <span class="title">you!</span>
+        </div>
+    </div>
     <div class="left-container">
         <div class="register-box">
             <h2>Create an account!</h2>
-            <span>Already have an account? <a href="">Login</a></span>
+            <span>Already have an account? <a routerLink="/login">Login</a></span>
             <form [formGroup]="registerForm" action="submit" (ngSubmit)="registerSubmited()">
                 <input type="email" placeholder=" Email" formControlName="email">
                 <div class="form-text text-danger text-center" *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)">Email required</div>
+                <div class="form-text text-danger text-center" *ngIf="Email.errors?.['email'] && (Email.touched || Email.dirty)">Email is invalid!</div>
                 <input type="password" placeholder="  Password" formControlName="password" >
                 <div class="form-text text-danger text-center" *ngIf="Password.errors?.['required'] && (Password.touched || Password.dirty)">Password required</div>
+                <div class="form-text text-danger text-center" *ngIf="!registerForm.get('password')?.valid && registerForm.get('password')?.touched">Password lenght should be between 6-20 letters!</div>
                 <input type="password" placeholder=" Repeat password" name="" id="" formControlName="repeatPass">
                 <div class="form-text text-danger text-center" *ngIf="RepeatPassword.errors?.['required'] && (RepeatPassword.touched || RepeatPassword.dirty)">Repeat password required</div>
                 <label class="check-menu">
@@ -18,29 +26,25 @@
                     <span>You are 18 or above!</span>
                 </label>
                 <div class="form-text text-danger text-left" *ngIf="IsEighteen.errors?.['required']">Required</div>
-                <label class="check-menu">
-                    <input type="checkbox" value="f" formControlName="isEighteen" name="" id="check">
-                    <span>You agree to send adds!</span>
-                </label>
                 <button type="submit" [disabled]="registerForm.invalid">Create account</button>
             </form>
             <div class="divider">
                 <hr class="left"/>or<hr class="right" />
             </div>
             <div class="social">
-                <button id="google"><i class="fa-brands fa-google"></i> Google</button>
-                <button id="facebook"><i class="fa-brands fa-facebook-f"></i> Facebook</button>
-                <button id="apple"><i class="fa-brands fa-apple"></i> Apple</button>
+                <a href="google.com/" id="google"><i class="fa-brands fa-google"></i> Google</a>
+                <a href="https://www.apple.com/bg/" id="facebook"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+                <a href="https://www.apple.com/bg/" id="apple"><i class="fa-brands fa-apple"></i> Apple</a>
             </div>
             <div class="social-apps">
-                <a href=""><i class="fa-brands fa-steam-symbol"></i></a>
-                <a href=""><i class="fa-brands fa-discord"></i></a>
-                <a href=""><i class="fa-brands fa-twitch"></i></a>
-                <a href=""><i class="fa-brands fa-twitter"></i></a>
-                <a href=""><i class="fa-brands fa-vk"></i></a>
+                <a href="https://store.steampowered.com/"><i class="fa-brands fa-steam-symbol"></i></a>
+                <a href="https://discord.com/"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://www.twitch.tv/"><i class="fa-brands fa-twitch"></i></a>
+                <a href="https://discord.com/"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://vk.com/"><i class="fa-brands fa-vk"></i></a>
             </div>
-            <a class="button" href="" routerLink="/login">Go to <span>Login</span></a>
-            <a class="button" href="" routerLink="/">Go to <span>Home</span></a>
         </div>
     </div>
 </section>
+<app-footer></app-footer>
+

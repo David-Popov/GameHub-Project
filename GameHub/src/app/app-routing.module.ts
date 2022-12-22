@@ -6,6 +6,7 @@ import { AdminOptionsComponent } from './admin-options/admin-options.component';
 import { AllGamesComponent } from './all-games/all-games.component';
 import { AppComponent } from './app.component';
 import { ChosenGameComponent } from './chosen-game/chosen-game.component';
+import { ContactComponent } from './contact/contact.component';
 import { ContentComponent } from './content/content.component';
 import { EditGameComponent } from './edit-game/edit-game.component';
 import { FavouriteGamesComponent } from './favourite-games/favourite-games.component';
@@ -76,6 +77,10 @@ const routes: Routes = [
     path: 'User/AddFavouriteGame/:id',
     component: FavouriteGamesComponent
   },
+  {
+    path: 'Contact',
+    component: ContactComponent
+  }
 
 ];
 

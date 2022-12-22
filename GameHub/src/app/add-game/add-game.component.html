@@ -5,19 +5,21 @@
         </div> -->
         <div class="right">
             <h3>Add new Game</h3>
-            <form #form="ngForm" action="" class="edit-form" (ngSubmit)="addGame()">
+            <form #form="ngForm" [formGroup]="addForm" action="" class="edit-form" (ngSubmit)="addGame()">
                 <div class="rows">
                     <p>
                         <mat-form-field appearance="legacy">
                           <mat-label>Name</mat-label>
-                          <input matInput placeholder="Placeholder" type="text" [(ngModel)] = "this.game.name" name="name">
+                          <input matInput placeholder="Placeholder" formControlName="Name" type="text" [(ngModel)] = "this.game.name" name="name">
+                          <mat-error *ngIf="!addForm.get('Name')?.valid && addForm.get('Name')?.touched">Name required! Range should be between 3-30 chars!</mat-error>
                           <mat-hint>Hint</mat-hint>
                         </mat-form-field>
                       </p>
                       <p>
                         <mat-form-field appearance="legacy">
                           <mat-label>Price</mat-label>
-                          <input matInput placeholder="Placeholder" type="number" [(ngModel)] = "this.game.price" name="price">
+                          <input matInput placeholder="Placeholder" formControlName="Price" type="number" [(ngModel)] = "this.game.price" name="price">
+                          <mat-error *ngIf="!addForm.get('Price')?.valid && addForm.get('Price')?.touched">Price should be between 1-250$</mat-error>
                           <mat-hint>Hint</mat-hint>
                         </mat-form-field>
                       </p>
@@ -26,14 +28,16 @@
                 <p>
                     <mat-form-field appearance="legacy">
                       <mat-label>ImageUrl</mat-label>
-                      <input matInput placeholder="Placeholder" type="text" [(ngModel)] = "this.game.imageUrl" name="imageUrl">
+                      <input matInput placeholder="Placeholder" formControlName="ImageUrl" type="text" [(ngModel)] = "this.game.imageUrl" name="imageUrl">
+                      <mat-error *ngIf="!addForm.get('ImageUrl')?.valid && addForm.get('ImageUrl')?.touched">ImageUrl required!</mat-error>
                       <mat-hint>Hint</mat-hint>
                     </mat-form-field>
                   </p>
                   <p>
                     <mat-form-field appearance="legacy">
                       <mat-label>Date</mat-label>
-                      <input matInput [matDatepicker]="picker" placeholder="Placeholder" type="text" [(ngModel)] = "this.game.date " name="date">
+                      <input matInput [matDatepicker]="picker" placeholder="Placeholder" formControlName="Date" type="text" [(ngModel)] = "this.game.date " name="date">
+                      <mat-error *ngIf="!addForm.get('Date')?.valid && addForm.get('Date')?.touched">Pick date please!</mat-error>
                       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                       <mat-datepicker #picker></mat-datepicker>
                       <mat-hint>Hint</mat-hint>
@@ -44,14 +48,16 @@
                 <p>
                     <mat-form-field appearance="legacy">
                       <mat-label>Rating</mat-label>
-                      <input matInput placeholder="Placeholder" type="number" [(ngModel)] = "this.game.rating" name="rating">
+                      <input matInput placeholder="Placeholder" formControlName="Rating" type="number" [(ngModel)] = "this.game.rating" name="rating">
+                      <mat-error *ngIf="!addForm.get('Rating')?.valid && addForm.get('Rating')?.touched">Rating value should be between 1-5</mat-error>
                       <mat-hint>Hint</mat-hint>
                     </mat-form-field>
                   </p>
                   <p>
                     <mat-form-field appearance="legacy">
                       <mat-label>Status</mat-label>
-                      <input matInput placeholder="Placeholder" type="text" [(ngModel)] = "this.game.status" name="status">
+                      <input matInput placeholder="Placeholder" formControlName="Status" type="text" [(ngModel)] = "this.game.status" name="status">
+                      <mat-error *ngIf="!addForm.get('Status')?.valid && addForm.get('Status')?.touched">Please use status such as 'Global', 'Europe'..!</mat-error>
                       <mat-hint>Hint</mat-hint>
                     </mat-form-field>
                   </p>
@@ -60,14 +66,16 @@
                 <p>
                     <mat-form-field appearance="legacy">
                       <mat-label>GenreId</mat-label>
-                      <input matInput placeholder="Placeholder" type="text" [(ngModel)] = "this.game.genreId" name="genreId">
+                      <input matInput placeholder="Placeholder" formControlName="GenreId" type="text" [(ngModel)] = "this.game.genreId" name="genreId">
+                      <mat-error *ngIf="!addForm.get('GenreId')?.valid && addForm.get('GenreId')?.touched">GenreId should be between 1-12!</mat-error>
                       <mat-hint>Hint</mat-hint>
                     </mat-form-field>
                   </p>
                   <p>
                     <mat-form-field appearance="legacy">
                       <mat-label>PlatformId</mat-label>
-                      <input matInput placeholder="Placeholder" type="text" [(ngModel)] = "this.game.platformId" name="platformId">
+                      <input matInput placeholder="Placeholder" formControlName="PlatformId" type="text" [(ngModel)] = "this.game.platformId" name="platformId">
+                      <mat-error *ngIf="!addForm.get('PlatformId')?.valid && addForm.get('PlatformId')?.touched">PlatformId should be between 1-12!</mat-error>
                       <mat-hint>Hint</mat-hint>
                     </mat-form-field>
                   </p>
@@ -76,18 +84,21 @@
                   <p>
                     <mat-form-field appearance="legacy">
                       <mat-label>Description</mat-label>
-                      <input matInput placeholder="Placeholder" type="text" [(ngModel)] = "this.game.gameDescription" name="gameDescription">
+                      <input matInput placeholder="Placeholder" formControlName="Description" type="text" [(ngModel)] = "this.game.gameDescription" name="gameDescription">
+                      <mat-error *ngIf="!addForm.get('Description')?.valid && addForm.get('Description')?.touched">Desciption is required!</mat-error>
                       <mat-hint>Hint</mat-hint>
                     </mat-form-field>
                   </p>
               </div>
                 <div class="buttons">
-                    <button>Add<mat-icon>add </mat-icon></button>
+                    <button [disabled]="addForm.invalid">Add <mat-icon>add </mat-icon></button>
                 </div>
                 <a routerLink="/admin">Go back</a>
             </form>
         </div>
     </div>
 </section>
+<app-footer></app-footer>
+
 
 

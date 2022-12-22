@@ -1,13 +1,12 @@
-<div class="back-btn">
-  <button mat-button routerLink="/add">Add game</button>
-  <button mat-button routerLink="/">Go to Home</button>
-</div>
+<app-navigation></app-navigation>
 
 <div class="search-box">
   <input type="text" placeholder="Search game..." 
   [(ngModel)]="filterString"
   (keyup)="filterGames()"
   >
+  <button mat-button routerLink="/add">Add game</button>
+
 </div>
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -64,10 +63,6 @@
          </td>
       </ng-container>
 
-     
-    
-
-  
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
@@ -79,5 +74,7 @@
     aria-label="Select page">
     </mat-paginator>
   </div>
+<app-footer></app-footer>
+
   
   

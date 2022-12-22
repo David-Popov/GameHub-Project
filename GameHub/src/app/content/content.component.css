@@ -1,11 +1,41 @@
+.popular{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #FEE715FF;
+}
+
+.top-games{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color:#101820FF;
+}
+
 .content{
+    width: 85%;
     background-color: #FEE715FF;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
-    width: 100%;
     margin: auto;
     margin-top: 20px;
+    justify-items: center;
+}
+
+.content1{
+    width: 85%;
+    background-color: #101820FF;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin: auto;
+    margin-top: 20px;
+    justify-items: center;
 }
 
 .card{
@@ -21,6 +51,11 @@
     border: none;
 }
 
+
+.carousel-item img{
+    height: 600px;
+}
+
 .content .card{
     width: 220px;
     height: 400px;
@@ -33,6 +68,7 @@
     border-radius: 10px;
     border: none;
 }
+
 
 
 .card img{
@@ -92,16 +128,6 @@
     border-radius: 5px;
     height: 30px;
     font-size: 1rem
-}
-
-.topGames{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
-    width: 100%;
-    margin: auto;
-    margin-top: 20px;
-    background-color: #101820FF;
 }
 
 .categories-box{
@@ -207,9 +233,29 @@ footer{
     color: #101820FF;
 }
 
-.topGames-tittle{
-    text-align: center;
+.topGames-title{
+    text-align: left;
     color: #fff;
-    font-size: 1.8rem;
-    margin-top: 10px;
+    font-size: 2.2rem;
+    margin-top: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.popular-title{
+    text-align: left;
+    color: #101820FF;
+    font-size: 2.2rem;
+    margin-top: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.categories-title{
+    text-align: left;
+    color: #101820FF;
+    font-size: 2.2rem;
+    margin-top: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
 }

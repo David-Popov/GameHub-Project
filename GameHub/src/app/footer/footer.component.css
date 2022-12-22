@@ -1,0 +1,40 @@
+footer{
+    background-color: #101820FF;
+    width: 100%;
+}
+
+.info{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    height: 200px;
+}
+
+.cols{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.cols ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
+    
+}
+
+.cols a{
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 5px;
+}
+
+
+
+

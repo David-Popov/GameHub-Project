@@ -20,11 +20,10 @@ export class RegisterComponent implements OnInit {
 
 
   registerForm = new FormGroup({
-    email: new FormControl("",[Validators.required,Validators.minLength(2),Validators.pattern("[a-zA-Z].*")]),
-    password: new FormControl("",[Validators.required,Validators.minLength(5)]),
-    repeatPass: new FormControl("",[Validators.required,Validators.minLength(5)]),
+    email: new FormControl("",[Validators.required,Validators.minLength(6),Validators.pattern("[a-zA-Z].*"),Validators.maxLength(24),Validators.email]),
+    password: new FormControl("",[Validators.required,Validators.minLength(6),Validators.maxLength(20)]),
+    repeatPass: new FormControl("",[Validators.required,Validators.minLength(6),Validators.maxLength(20)]),
     isEighteen: new FormControl("",[Validators.required])
-
   })
 
   get Email(): FormControl{
@@ -39,6 +38,7 @@ export class RegisterComponent implements OnInit {
   get IsEighteen(): FormControl{
     return this.registerForm.get("isEighteen") as FormControl;
   }
+
 
   registerSubmited(){
     if (this.Password.value == this.RepeatPassword.value && this.Email.value != "" && this.Password.value != "" && this.RepeatPassword.value != "") {
